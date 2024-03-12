@@ -1,0 +1,183 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    /* overflow is set to visible after the animation of the content is played*/
+    overflow: hidden;
+    background-color: rgb(25, 25, 25);
+    /* overflow: hidden; */
+    margin: 0;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-rows: 45vh 1fr;
+    grid-template-areas: "banner"
+                         "main";
+}
+/*NAV*/
+nav{
+    z-index: 1;
+    background-color: rgba(25, 25, 25, 0.7);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    width: 100%;
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav a{
+    color: rgb(220, 220, 220);
+    font-size: 23px;
+    margin: 0px 10px;
+    padding: 5px 5px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+nav a:hover {
+    color: black;
+    background-color: rgb(220, 220, 220);
+}
+button{
+    all: unset;
+    cursor: pointer;
+}
+.burger{
+    z-index: 2;
+    position: absolute;
+    top: 33px;
+    right: 33px;
+}
+.logo{
+    z-index: 2;
+    position: absolute;
+    top: 22px;
+    left: 28px;
+    height: 23px;
+    width: auto;
+}
+/*END NAV*/
+/*BANNER*/
+.banner{
+    grid-area: banner;
+    background-image: URL("/media/banner3.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*END BANNER*/
+/*MAIN*/
+main{
+    grid-area: main;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 40px;
+    justify-content: center;
+}
+.white-box{
+    display: grid;
+    border: 1px solid rgb(100, 100, 100);
+    width: 1380px;
+    padding: 50px 50px;
+    text-align: center;
+
+    
+    grid-template-columns: 675px 675px;
+    grid-template-rows: 675px 675px 675px;
+    grid-template-areas:"topLeft topRight"
+                        "midLeft midRight"
+                        "bottomLeft bottomRight";
+    grid-gap: 30px;
+    /*For animation*/
+    transform: translateY(30%);
+    opacity: 0;
+}
+h1, h2, h3, h4{
+    color: rgb(220, 220, 220);
+}
+h1{
+    font-size: 50px;
+}
+.topLeft{
+    grid-area: topLeft;
+    display: grid;
+    grid-template-columns: 330px 330px;
+    grid-template-rows: 330px 330px;
+    grid-template-areas:"TL_topLeft TL_topRight"
+                        "TL_bottomLeft TL_bottomRight";
+    grid-gap: 15px;
+}
+.TL_topLeft{
+    grid-area: TL_topLeft;
+}
+.TL_topRight{
+    grid-area:TL_topRight;
+}
+.TL_bottomLeft{
+    grid-area: TL_bottomLeft;
+}
+.TL_bottomRight{
+    grid-area: TL_bottomRight;
+}
+.topRight{
+    grid-area: topRight;
+}
+.topRight img{
+    object-position: -15px;
+}
+.midLeft{
+    grid-area: midLeft;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.midRight{
+    grid-area: midRight;
+    display: grid;
+    grid-template-columns: 330px 330px;
+    grid-template-rows: 330px 330px;
+    grid-template-areas:"MR_topLeft MR_topRight"
+                        "MR_bottomLeft MR_bottomRight";
+    grid-gap: 15px;
+}
+.MR_topLeft{
+    grid-area: MR_topLeft;
+}
+.MR_topRight{
+    grid-area: MR_topRight;
+}
+.MR_bottomLeft{
+    grid-area: MR_bottomLeft;
+}
+.MR_bottomLeft img{
+    object-position: left;
+}
+.MR_bottomRight{
+    grid-area: MR_bottomRight;
+}
+.bottomLeft{
+    grid-area: bottomLeft;
+    display: grid;
+    grid-template-columns: 330px 330px;
+    grid-template-rows: 330px 330px;
+    grid-template-areas:"BL_topLeft BL_topRight"
+                        "BL_bottomLeft BL_bottomRight";
+    grid-gap: 15px;
+}
+.BL_topLeft{
+    grid-area: BL_topLeft;
+}
+.BL_topRight{
+    grid-area: BL_topRight;
+}
+.BL_bottomLeft{
+    grid-area: BL_bottomLeft;
+}
+.BL_bottomRight{
+    grid-area: BL_bottomRight;
+}
+.bottomRight{
+    grid-area: bottomRight;
+}
+

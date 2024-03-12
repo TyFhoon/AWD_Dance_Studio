@@ -1,0 +1,7 @@
+-Make to-dolist
+-Index:
+    -Functional hamburger
+    -Reprogram/ replace lightbox??
+
+-Everything else
+    

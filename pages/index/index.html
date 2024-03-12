@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1STEP - Home</title>
+    <link rel="stylesheet" href="./style.css">
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <!--lightbox-->
+    <link href="/lightbox/dist/css/lightbox.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--NAV-->
+    <nav id="navID">
+        <a href="/pages/about/about.html">ABOUT</a>
+        <a href="/pages/classes/classes.html">CLASSES</a>
+        <a href="/pages/contact/contact.html">CONTACT</a>
+        <a href="/pages/gallery/gallery.html">GALLERY</a>
+        <a class="loginButton" href="#">LOGIN</a>
+    </nav>
+    <a href="/pages/index/index.html">
+        <img class="logo" src="/media/Logo-Inverted.png" alt="1 step logo">
+    </a>
+    <button onclick="changeState()"><i class="burger fa-solid fa-bars fa-2xl"
+            style="color: rgb(220, 220, 220);"></i></button>
+    <!--END NAV-->
+    <!--BANNER-->
+    <div class="banner">
+        <h1> WELCOME </h1>
+    </div>
+    <!--END BANNER-->
+    <!--CONTENT-->
+    <main>
+        <div class="white-box" id="fadeInID">
+            <div class="title">
+                <h2>WE PROVIDE:</h2>
+            </div>
+            <div class="content">
+                <div class="block block1" id="studioID">
+                    <a href="/media/dance_studio.jpg" data-lightbox="index-set">
+                        <img src="/media/dance_studio.jpg" alt="An empty studio with a piano">
+                    </a>
+                    <h3>STUDIOS</h3>
+                </div>
+                <div class="block block2">
+                    <a href="/media/dance_class.jpg" data-lightbox="index-set">
+                        <img src="/media/dance_class.jpg" alt="A class of dancers">
+                    </a>
+                    <h3>CLASSES</h3>
+                </div>
+                <div class="block block3">
+                    <a href="/media/dance_tuition.jpeg" data-lightbox="index-set">
+                        <img src="/media/dance_tuition.jpeg" alt="A teacher helping a child with dancing">
+                    </a>
+                    <h3>TUITION</h3>
+                </div>
+                <div class="block block4">
+                    <a href="/media/more.jpg" data-lightbox="index-set">
+                        <img src="/media/more.jpg" alt="silhouette of people dancing on a hill">
+                    </a>
+                    <h3>AND MORE</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<!--Jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<!--Font awsome-->
+<script src="https://kit.fontawesome.com/3e6919312b.js" crossorigin="anonymous"></script>
+<!--Lightbox-->
+<script src="/lightbox/dist/js/lightbox.js"></script>
+<!--Animation Script-->
+<script src="/scripts/start.js"></script>
+<script src="/scripts/burger.js"></script>
+
+</html>

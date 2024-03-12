@@ -1,0 +1,221 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    /* overflow is set to visible after the animation of the content is played*/
+    overflow: hidden;
+    background-color: rgb(25, 25, 25);
+    /* overflow: hidden; */
+    margin: 0;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-rows: 45vh 1fr;
+    grid-template-areas: "banner"
+                         "main";
+}
+/*NAV*/
+nav{
+    z-index: 1;
+    background-color: rgba(25, 25, 25, 0.7);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    width: 100%;
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav a{
+    color: rgb(220, 220, 220);
+    font-size: 23px;
+    margin: 0px 10px;
+    padding: 5px 5px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+nav a:hover {
+    color: black;
+    background-color: rgb(220, 220, 220);
+}
+button{
+    all: unset;
+    cursor: pointer;
+}
+.burger{
+    z-index: 2;
+    position: absolute;
+    top: 33px;
+    right: 33px;
+}
+.logo{
+    z-index: 2;
+    position: absolute;
+    top: 22px;
+    left: 28px;
+    height: 23px;
+    width: auto;
+}
+/*END NAV*/
+/*BANNER*/
+.banner{
+    grid-area: banner;
+    background-image: URL("/media/banner2.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*END BANNER*/
+/*MAIN*/
+main{
+    grid-area: main;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 40px;
+    justify-content: center;
+}
+.white-box{
+    border: 1px solid rgb(100, 100, 100);
+    width: 1500px;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "aboutTxt1 aboutImg1"
+                         "aboutImg2 aboutTxt2"
+                         "aboutTxt3 aboutImg3";
+    padding-top: 45px;
+    padding-bottom: 45px;
+
+    /*For animation*/
+    transform: translateY(30%);
+    opacity: 0;
+}
+h1, h2, h3, h4{
+    color: rgb(220, 220, 220);
+}
+h1{
+    font-size: 50px;
+}
+.leftText{
+    width: 400px; 
+    padding-right: 10px;
+    text-align: end;
+    display: flex;
+    align-items: center;
+}
+.rightText{
+    flex-direction: column;
+    padding: 0px 10px;
+    text-align: start;
+}
+.rightText hr{
+    border-color: rgb(70, 70, 70);
+}
+.aboutTxt1, .aboutTxt2, .aboutTxt3{
+    display: flex;
+    flex-direction: row;
+}
+.aboutTxt1{
+    grid-area: aboutTxt1;
+}
+.aboutImg1{
+    grid-area: aboutImg1;
+    display: flex;
+    align-items: center;
+}
+.aboutLogo{
+    width: 450px;
+}
+.aboutTxt2{
+    grid-area: aboutTxt2;
+}
+.aboutImg2{
+    grid-area: aboutImg2;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.studio{
+    width: 400px;
+}
+.aboutTxt3{
+    grid-area: aboutTxt3;
+}
+.aboutImg3{
+    grid-area: aboutImg3;
+    display: flex;
+    align-items: center;
+}
+.antonyTudor{
+    width: 250px;
+}
+
+@media screen and (max-width: 1550px){
+    .white-box{
+        width: 800px;
+        grid-template-columns: 50% 50%;
+        padding: 30px 20px;
+    }
+    .aboutLogo{
+        width: 350px;
+    }
+    .studio{
+        width: 300px;
+    }
+    .antonyTudor{
+        width: 200px;
+    }
+    .aboutImg1{
+        justify-content: center;
+    }
+    .aboutImg2{
+        justify-content: center;
+    }
+    .aboutImg3{
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 900px){
+    body{
+        grid-template-rows: 30vh 1fr;
+    }
+    nav{
+        opacity: 0;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+    }
+    .white-box{
+        width: 350px;
+        grid-template-areas:
+                            "aboutTxt1"
+                            "aboutImg1"                        
+                            "aboutTxt2"
+                            "aboutImg2"                           
+                            "aboutTxt3"
+                            "aboutImg3";
+        grid-template-columns: 100%;
+
+        transform: translateY(5%);
+    }
+    .aboutTxt1, .aboutTxt2, .aboutTxt3{
+        display: block;
+        flex-direction: column;
+    }
+    .leftText{
+        width: 100%;
+        padding-right: 0px;
+        text-align: center;
+        display: block;
+    }
+    .aboutLogo{
+        padding-bottom: 70px;
+    }
+    .studio{
+        padding-bottom: 70px;
+    }
+}
+
+
