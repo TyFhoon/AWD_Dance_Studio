@@ -10,7 +10,7 @@ const body = document.body; //gets body
 let start = async() => {
     await sleep(500);
     //Fades in and moves up
-    fadeIn.style.transition = "transform 0.5s ease, opacity 0.5s ease";
+    fadeIn.style.transition = "transform 0.7s ease, opacity 0.7s ease";
     fadeIn.style.transform = "translateY(0%)";
     fadeIn.style.opacity = 1;
     //Waits for the animation to finish before making overflow visible
