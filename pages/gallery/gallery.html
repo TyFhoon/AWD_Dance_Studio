@@ -2,11 +2,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1STEP - Gallery</title>
+
     <link rel="stylesheet" href="./gallery.css">
     <!--font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 </head>
 
 <body>
@@ -21,7 +24,7 @@
     <a href="/pages/index/index.html">
         <img class="logo" src="/media/Logo-Inverted.png" alt="1 step logo">
     </a>
-    <button onclick="changeState()"><i class="burger fa-solid fa-bars fa-2xl"
+    <button id="burgerID"><i class="burger fa-solid fa-bars fa-2xl"
             style="color: rgb(220, 220, 220);"></i></button>
     <!--END NAV-->
     <!--BANNER-->
@@ -30,77 +33,269 @@
     </div>
     <!--END BANNER-->
     <main>
-        <div class="white-box" id="fadeInID">
-            <!--TOP-->
-            <div class="topLeft">
-                <div class="TL_topLeft">
-                    
-                </div>
-                <div class="TL_topRight">
-                    <img src="/media/gallery/balletlight.jpeg">
-                </div>
-                <div class="TL_bottomLeft">
-                    <img src="/media/gallery/balletsync.jpeg">
-                </div>
-                <div class="TL_bottomRight">
-                    <img src="/media/gallery/balletdancing.jpeg">
-                </div>
+        <div class="animateIn" id="fadeInID">
+            <!-- GALLERY BUTTON SWITCH -->
+            <div class="gallery_switch">
+                <a href="#" id="balletButton">BALLET</a>
+                <a href="#" id="abstractButton">ABSTRACT</a>
             </div>
-            <div class="topRight">
-                <img src="/media/gallery/studio_practice.jpg">
-            </div>
-            <!--END TOP-->
-            <!--MIDDLE-->
-            <div class="midLeft">
-                <img src="/media/gallery/ballerniabride.jpg">
-            </div>
-            <div class="midRight">
-                <div class="MR_topLeft">
-                    <img src="/media/gallery/blackwhitedance.jpeg">
-                </div>
-                <div class="MR_topRight">
+            <div class="gallery_container">
+                <!-- BALLET GALLERY-->
+                <div class="white-box" id="ballet_Gallery">
+                    <div class="title1">
+                        <hr>
+                        <h2>PROFESSIONAL CLASSES</h2>
+                    </div>
+                    <!--TOP-->
+                    <div class="topLeft">
+                        <div class="TL_topLeft">
+                            <h3>WE PROVIDE CLASSES FOR PROFESSIONAL BALLET DANCERS. <br> <br> BALLET DANCERS WITH OVER
+                                7+ YEARS
+                                CAN JOIN OUR CLASSES. <br> <br> THESE CLASSES WILL PUSH YOUR LIMITS AND REINFORCE YOUR
+                                PASSION FOR BALLET.
+                            </h3>
+                        </div>
+                        <div class="TL_topRight">
+                            <a href="/media/gallery/balletlight.jpeg" data-fancybox="gallery"
+                                data-caption="PROFESSIONAL">
+                                <img src="/media/gallery/balletlight.jpeg">
+                            </a>
+                        </div>
+                        <div class="TL_bottomLeft">
+                            <a href="/media/gallery/balletsync.jpeg" data-fancybox="gallery"
+                                data-caption="PROFESSIONAL">
+                                <img src="/media/gallery/balletsync.jpeg">
+                            </a>
 
+                        </div>
+                        <div class="TL_bottomRight">
+                            <a href="/media/gallery/balletdancing.jpeg" data-fancybox="gallery"
+                                data-caption="PROFESSIONAL">
+                                <img src="/media/gallery/balletdancing.jpeg">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="topRight">
+                        <a href="/media/gallery/studio_practice.jpg" data-fancybox="gallery"
+                            data-caption="PROFESSIONAL">
+                            <img src="/media/gallery/studio_practice.jpg">
+                        </a>
+                    </div>
+                    <!--END TOP-->
+                    <div class="title2">
+                        <h2>AMATEUR CLASSES</h2>
+                        <hr>
+                    </div>
+                    <!--MIDDLE-->
+                    <div class="midLeft">
+                        <a href="/media/gallery/ballerniabride.jpg" data-fancybox="gallery" data-caption="AMATEUR">
+                            <img src="/media/gallery/ballerniabride.jpg">
+                        </a>
+                    </div>
+                    <div class="midRight">
+                        <div class="MR_topLeft">
+                            <a href="/media/gallery/blackwhitedance.jpeg" data-fancybox="gallery"
+                                data-caption="AMATEUR">
+                                <img src="/media/gallery/blackwhitedance.jpeg">
+                            </a>
+                        </div>
+                        <div class="MR_topRight">
+                            <h3>WE ALSO HAVE AMATEUR CLASSES FOR ANY BALLET DANCERS THAT ARE BELOW THE AGE OF 18. <br>
+                                <br>
+                                THIS CAN RANGE FROM 0 - 7 YEARS OF EXPERIENCE. <br> <br>
+                                LEARN NEW SKILLS, MAKE NEW FREINDS, AND GROW A PASSION FOR DANCE.
+                            </h3>
+                        </div>
+                        <div class="MR_bottomLeft">
+                            <a href="/media/gallery/colour_dance.jpg" data-fancybox="gallery" data-caption="AMATEUR">
+                                <img src="/media/gallery/colour_dance.jpg">
+                            </a>
+                        </div>
+                        <div class="MR_bottomRight">
+                            <a href="/media/gallery/Stretch.jpeg" data-fancybox="gallery" data-caption="AMATEUR">
+                                <img src="/media/gallery/Stretch.jpeg">
+                            </a>
+                        </div>
+                    </div>
+                    <!--END MIDDLE-->
+                    <!--BOTTOM-->
+                    <div class="title3">
+                        <hr>
+                        <h2>NOVICE CLASSES</h2>
+                    </div>
+                    <div class="bottomLeft">
+                        <div class="BL_topLeft">
+                            <h3> DOES YOUR KID OR KIDS WANT TO LEARN BALLET? <br> <br>
+                                HERE, WE PROVIDE KID CLASSES FOR ANY CHILD UNDER 12 <br> <br>
+                                THEY DONT NEED ANY EXPERIENCE AND WILL GROW UP TO LOVE BALLET! <br> <br>
+                            </h3>
+                        </div>
+                        <div class="BL_topRight">
+                            <a href="/media/gallery/dance_school1.jpg" data-fancybox="gallery" data-caption="NOVICE">
+                                <img src="/media/gallery/dance_school1.jpg">
+                            </a>
+                        </div>
+                        <div class="BL_bottomLeft">
+                            <a href="/media/gallery/dance_school2.jpg" data-fancybox="gallery" data-caption="NOVICE">
+                                <img src="/media/gallery/dance_school2.jpg">
+                            </a>
+                        </div>
+                        <div class="BL_bottomRight">
+                            <a href="/media/gallery/balet_perperation.jpg" data-fancybox="gallery"
+                                data-caption="NOVICE">
+                                <img src="/media/gallery/balet_perperation.jpg">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bottomRight">
+                        <a href="/media/gallery/ballet_slippers.jpeg" data-fancybox="gallery" data-caption="JUNIORS">
+                            <img src="/media/gallery/ballet_slippers.jpeg">
+                        </a>
+                    </div>
+                    <!--END BOTTOM-->
                 </div>
-                <div class="MR_bottomLeft">
-                    <img src="/media/gallery/colour_dance.jpg">
+                <!-- END BALLET GALLERY -->
+
+                <!-- ABSTRACT GALLERY-->
+
+                <div class="white-box abstract_gallery" id="abstract_Gallery">
+                    <div class="title1">
+                        <hr>
+                        <h2>PROFESSIONAL ABSTRACT CLASSES</h2>
+                    </div>
+                    <!--TOP-->
+                    <div class="topLeft">
+                        <div class="TL_topLeft">
+                            <h3>WE PROVIDE CLASSES FOR PROFESSIONAL BALLET DANCERS. <br> <br> BALLET DANCERS WITH OVER
+                                7+ YEARS
+                                CAN JOIN OUR CLASSES. <br> <br> THESE CLASSES WILL PUSH YOUR LIMITS AND REINFORCE YOUR
+                                PASSION FOR BALLET.
+                            </h3>
+                        </div>
+                        <div class="TL_topRight">
+                            <a href="/media/gallery/Abstract_Prof1.png" data-fancybox="gallery2"
+                                data-caption="PROFESSIONAL">
+                                <img src="/media/gallery/Abstract_Prof1.png">
+                            </a>
+                        </div>
+                        <div class="TL_bottomLeft">
+                            <a href="/media/gallery/Abstract_Prof2.png" data-fancybox="gallery2"
+                                data-caption="PROFESSIONAL">
+                                <img src="/media/gallery/Abstract_Prof2.png">
+                            </a>
+
+                        </div>
+                        <div class="TL_bottomRight">
+                            <a href="/media/gallery/Abstract_Pro4.png" data-fancybox="gallery2"
+                            data-caption="PROFESSIONAL">
+                            <img src="/media/gallery/Abstract_Pro4.png">
+                        </a>
+                        </div>
+                    </div>
+                    <div class="topRight">
+                        <a href="/media/gallery/Abstract_Prof3.png" data-fancybox="gallery2"
+                                data-caption="PROFESSIONAL">
+                                <img src="/media/gallery/Abstract_Prof3.png">
+                            </a>
+                    </div>
+                    <!--END TOP-->
+                    <div class="title2">
+                        <h2>AMATEUR CLASSES</h2>
+                        <hr>
+                    </div>
+                    <!--MIDDLE-->
+                    <div class="midLeft">
+                            <a href="/media/gallery/Abstract_Adult4.png" data-fancybox="gallery2"
+                                data-caption="PROFESSIONAL">
+                                <img src="/media/gallery/Abstract_Adult4.png">
+                            </a>
+                    </div>
+                    <div class="midRight">
+                        <div class="MR_topLeft">
+                            <a href="/media/gallery/Abstract_Adult2.png" data-fancybox="gallery2"
+                                data-caption="PROFESSIONAL">
+                                <img src="/media/gallery/Abstract_Adult2.png">
+                            </a>
+                        </div>
+                        <div class="MR_topRight">
+                            <h3>WE ALSO HAVE AMATEUR CLASSES FOR ANY BALLET DANCERS THAT ARE BELOW THE AGE OF 18. <br>
+                                <br>
+                                THIS CAN RANGE FROM 0 - 7 YEARS OF EXPERIENCE. <br> <br>
+                                LEARN NEW SKILLS, MAKE NEW FREINDS, AND GROW A PASSION FOR DANCE.
+                            </h3>
+                        </div>
+                        <div class="MR_bottomLeft">
+                            <a href="/media/gallery/Abstract_Adult3.png" data-fancybox="gallery2"
+                                data-caption="PROFESSIONAL">
+                                <img src="/media/gallery/Abstract_Adult3.png">
+                            </a>
+                        </div>
+                        <div class="MR_bottomRight">
+                            <a href="/media/gallery/Abstract_Adult1.png" data-fancybox="gallery2"
+                                data-caption="PROFESSIONAL">
+                                <img src="/media/gallery/Abstract_Adult1.png">
+                            </a>
+                        </div>
+                    </div>
+                    <!--END MIDDLE-->
+                    <!--BOTTOM-->
+                    <div class="title3">
+                        <hr>
+                        <h2>NOVICE CLASSES</h2>
+                    </div>
+                    <div class="bottomLeft">
+                        <div class="BL_topLeft">
+                            <h3> DOES YOUR KID OR KIDS WANT TO LEARN BALLET? <br> <br>
+                                HERE, WE PROVIDE KID CLASSES FOR ANY CHILD UNDER 12 <br> <br>
+                                THEY DONT NEED ANY EXPERIENCE AND WILL GROW UP TO LOVE BALLET! <br> <br>
+                            </h3>
+                        </div>
+                        <div class="BL_topRight">
+                            <a href="/media/gallery/Abstract_Kid1.png" data-fancybox="gallery2"
+                                data-caption="PROFESSIONAL">
+                                <img src="/media/gallery/Abstract_Kid1.png">
+                            </a>
+                        </div>
+                        <div class="BL_bottomLeft">
+                            <a href="/media/gallery/Abstract_Kid2.png" data-fancybox="gallery2" data-caption="NOVICE">
+                                <img src="/media/gallery/Abstract_Kid2.png">
+                            </a>
+                        </div>
+                        <div class="BL_bottomRight">
+                            <a href="/media/gallery/Abstract_Kid4.png" data-fancybox="gallery2"
+                                data-caption="NOVICE">
+                                <img src="/media/gallery/Abstract_Kid4.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bottomRight">
+                        <a href="/media/gallery/Abstract_Kid3.png" data-fancybox="gallery2"
+                                data-caption="NOVICE">
+                                <img src="/media/gallery/Abstract_Kid3.png">
+                            </a>
+                    </div>
+                    <!--END BOTTOM-->
                 </div>
-                <div class="MR_bottomRight">
-                    <img src="/media/gallery/Stretch.jpeg">
-                </div>
+
+                <!-- END ABSTRACT GALLERY -->
             </div>
-            <!--END MIDDLE-->
-            <!--BOTTOM-->
-            <div class="bottomLeft">
-                <div class="BL_topLeft">
-    
-                </div>
-                <div class="BL_topRight">
-                    
-                    <img src="/media/gallery/dance_school1.jpg">
-                </div>
-                <div class="BL_bottomLeft">
-                    
-                    <img src="/media/gallery/dance_school2.jpg">
-                </div>
-                <div class="BL_bottomRight">
-                    
-                    <img src="/media/gallery/balet_perperation.jpg">
-                </div>
-            </div>
-            <div class="bottomRight">
-                
-                <img src="/media/gallery/ballet_slippers.jpeg">
-            </div>
-            <!--END BOTTOM-->
         </div>
     </main>
 </body>
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <!--Font awsome-->
 <script src="https://kit.fontawesome.com/3e6919312b.js" crossorigin="anonymous"></script>
+
+<!-- FANCY BOX-->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+<script>Fancybox.bind("[data-fancybox]", {}); </script>
+
 <!--Animation Script-->
 <script src="/scripts/start.js"></script>
 <script src="/scripts/burger.js"></script>
+<script src="./gallery.js"></script>
 
 </html>
