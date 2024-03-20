@@ -12,11 +12,20 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 abstractButton.addEventListener("click", function () {
+    //sets opacity
     ballet_Gallery.style.opacity = "0";
     abstract_Gallery.style.opacity = "1";
+    //sets z index so the gallery can be clicked
+    ballet_Gallery.style.zIndex = "0";
+    abstract_Gallery.style.zIndex = "1";
+
 });
 balletButton.addEventListener("click", function () {
+    //sets opacity
     ballet_Gallery.style.opacity = "1";
     abstract_Gallery.style.opacity = "0";
+    //sets z index
+    ballet_Gallery.style.zIndex = "1";
+    abstract_Gallery.style.zIndex = "0";
 });
 
