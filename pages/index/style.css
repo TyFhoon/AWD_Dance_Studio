@@ -1,7 +1,5 @@
 body{
     font-family: 'Montserrat', sans-serif;
-    /* overflow is set to visible after the animation of the content is played*/
-    overflow: hidden;
     background-color: rgb(25, 25, 25);
     /* overflow: hidden; */
     margin: 0;

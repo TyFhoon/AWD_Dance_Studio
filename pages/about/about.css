@@ -1,9 +1,6 @@
 body{
     font-family: 'Montserrat', sans-serif;
-    /* overflow is set to visible after the animation of the content is played*/
-    overflow: hidden;
     background-color: rgb(25, 25, 25);
-    /* overflow: hidden; */
     margin: 0;
     margin-bottom: 40px;
     display: grid;
@@ -154,7 +151,7 @@ h1{
     .white-box{
         width: 800px;
         grid-template-columns: 50% 50%;
-        padding: 30px 20px;
+        padding: 25px;
     }
     .aboutLogo{
         width: 350px;
