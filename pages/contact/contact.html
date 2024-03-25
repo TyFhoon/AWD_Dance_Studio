@@ -1,0 +1,123 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact INFO</title>
+    <link rel="stylesheet" href="./contact.css">
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+
+    <!-- GOOGLE MAPS -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+</head>
+
+<body>
+    <!--NAV-->
+    <nav id="navID">
+        <a href="/pages/about/about.html">ABOUT</a>
+        <a href="/pages/classes/classes.html">CLASSES</a>
+        <a href="/pages/contact/contact.html">CONTACT</a>
+        <a href="/pages/gallery/gallery.html">GALLERY</a>
+        <a class="loginButton" href="#">LOGIN</a>
+    </nav>
+    <a href="/pages/index/index.html">
+        <img class="logo" src="/media/Logo-Inverted.png" alt="1 step logo">
+    </a>
+    <button id="burgerID"><i class="burger fa-solid fa-bars fa-2xl" style="color: rgb(220, 220, 220);"></i></button>
+    <!--END NAV-->
+    <!--BANNER-->
+    <div class="banner">
+        <h1>CONTACT INFO</h1>
+    </div>
+    <!--END BANNER-->
+    <main>
+        <div class="white-box" id="fadeInID">
+            <!-- CONTACT INFO -->
+            <div class="contact_info">
+                <h2>GENERAL CONTACTS:</h2>
+                <hr>
+                <div class="contact_info_box">
+                    <!-- EMAIL -->
+                    <div class="email_info info_width">
+                        <i class="fa-solid fa-envelope fa-2xl" style="color: #dcdcdc;"></i>
+                        <h4>CONTACTUS@ONESTEP.COM <br><br> (1 - 2 WORKING DAYS)</h4>
+                    </div>
+                    <hr>
+                    <!-- ADDRESS -->
+                    <div class="location_info info_width">
+                        <i class="fa-solid fa-location-dot fa-2xl" style="color: #dcdcdc;"></i>
+                        <h3>10 WINE ST, <br> BRISTOL, <br> BS1 2AN </h3>
+                    </div>
+                    <hr>
+                    <!-- PHONE -->
+                    <div class="phone_info info_width">
+                        <i class="fa-solid fa-phone fa-2xl" style="color: #dcdcdc;"></i>
+                        <h3>03334570848 <br><br> (MON - FRI, 9AM - 5PM)</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTACT INFO -->
+            <div class="maps">
+                <h2>1STEP LOCATION:</h2>
+                <hr>
+                <div class="map_box" id="map">
+                </div>
+            </div>
+
+            <div class="contact">
+                <h2>CONTACT US:</h2>
+                <hr>
+                <div class="contact_box">
+                    <h3>
+                        NEED TO CONTACT US ABOUT: <br><br>
+                        FEEDBACK - <br>
+                        OUR FACILITIES - <br>
+                        OR OTHER QUESTIONS - <br> <br>
+                        NO WORRIES. SEND US A MESSAGE BY FILLING OUT THIS FORM AND WE WILL GET BACK TO YOUR MESSAGE AS SOON AS POSSIBLE.
+                    </h3>
+                    <hr>
+                    <form>
+                        <h3>FORM:</h3>
+                        <div class="name_box">
+                            <div class="fname_box">
+                                <label for="fname">FIRST NAME:</label><br>
+                                <input type="text" id="fname" name="fname"><br>
+                            </div>
+                            <div class="lname_box">
+                                <label for="lname">LAST NAME:</label><br>
+                                <input type="text" id="lname" name="lname"><br><br>
+                            </div>
+                        </div>
+                        <label for="email">EMAIL:</label><br>
+                        <input type="email" id="email" name="email"><br><br>
+                        <label for="company">COMPANY NAME:</label><br>
+                        <input type="text" id="company" name="company"><br><br>
+                        <label for="message">MESSAGE:</label><br>
+                        <textarea id="message" name="message" rows="10"></textarea> <br><br>
+                        <div class="submit">
+                            <input type="submit" value="SUBMIT">
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+            <!-- END GOOGLE MAPS -->
+        </div>
+    </main>
+    <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
+            ({ key: "AIzaSyCgxXQ_QYR2I_q7uVCbyh30N2e4-SQYZJ0", v: "weekly" });</script>
+</body>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgxXQ_QYR2I_q7uVCbyh30N2e4-SQYZJ0"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<!--Font awsome-->
+<script src="https://kit.fontawesome.com/3e6919312b.js" crossorigin="anonymous"></script>
+<!--Animation Script-->
+<script src="/scripts/start.js"></script>
+<script src="/scripts/burger.js"></script>
+<!-- Goggle maps -->
+<script src="./maps.js"></script>
+
+</html>

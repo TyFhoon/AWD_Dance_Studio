@@ -1,0 +1,280 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(25, 25, 25);
+    margin: 0;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-rows: 45vh 1fr;
+    grid-template-areas: "banner"
+                         "main";
+}
+/*NAV*/
+nav{
+    z-index: 1;
+    background-color: rgba(25, 25, 25, 0.7);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    width: 100%;
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav a{
+    color: rgb(220, 220, 220);
+    font-size: 23px;
+    margin: 0px 10px;
+    padding: 5px 5px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+nav a:hover {
+    color: black;
+    background-color: rgb(220, 220, 220);
+}
+button{
+    all: unset;
+    cursor: pointer;
+}
+.burger{
+    z-index: 20;
+    position: absolute;
+    top: 33px;
+    right: 33px;
+}
+.logo{
+    z-index: 20;
+    position: absolute;
+    top: 22px;
+    left: 28px;
+    height: 23px;
+    width: auto;
+}
+/*END NAV*/
+/*BANNER*/
+.banner{
+    grid-area: banner;
+    background-image: URL("/media/banner4.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*END BANNER*/
+/*MAIN*/
+main{
+    grid-area: main;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 40px;
+    justify-content: center;
+}
+.white-box{
+    border: 1px solid rgb(100, 100, 100);
+    width: 1500px;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30vh 60vh 80vh;
+    grid-template-areas: 
+                        "contact_info"
+                        "maps"
+                        "contact";
+    padding-top: 45px;
+    padding-bottom: 45px;
+    border-radius: 10px;
+
+    /*For animation*/
+    transform: translateY(30%);
+    opacity: 0;
+}
+h1, h2, h3, h4{
+    color: rgb(220, 220, 220);
+}
+h1{
+    font-size: 50px;
+}
+hr{
+    width: 50%;
+   
+}
+.contact_info{
+    grid-area: contact_info;
+   
+}
+.contact_info_box hr{
+    border-color: rgb(70, 70, 70);
+    width: 0;
+    height: 90px;
+    margin: 40px;
+}
+.contact_info_box{
+    display: flex;
+    margin-top: 30px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.info_width{
+    width: 280px
+}
+
+.maps{
+    grid-area: maps;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#map{
+    height: 100%;
+    width: 996px;
+    margin-top: 30px;
+    border: 2px solid rgb(100,100,100);
+    border-radius: 10px;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact_box{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact_box hr{
+    width: 0; 
+    height: 400px;
+    margin: 0 15px;
+    border-color: rgb(70, 70, 70);
+}
+
+.contact_box > h3{
+    width: 400px;
+    text-align: end;
+}
+form{
+    margin-top: 30px;
+    background-color: rgb(40, 40, 40);
+    width: 340px;
+    border-radius: 10px;
+    text-align: start;
+    padding: 10px 30px 30px 30px;
+    border: 1px solid rgb(100,100,100);
+}
+form h3{
+    text-align: center;
+}
+label{
+    color: white;
+}
+input, textarea{
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(100,100,100); 
+    font-family: inherit; 
+}
+textarea{
+    resize: none;
+}
+input{
+    height: 25px;  
+}
+.name_box{
+    display: flex;
+    flex-direction: row;  
+}
+.fname_box{
+    width: 50%;
+    padding-right: 5px;
+}
+.lname_box{
+    width: 50%;
+    padding-left: 5px;
+}
+.message{
+    height: 200px;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+}
+input[type="submit"]{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: inherit;
+    width: 40%;
+    height: 30px;
+    font-size: 20px;
+}
+input[type="submit"]:hover {
+    /* Add your hover styles here */
+    background-color: rgb(220, 220, 220);
+    color: black;
+}
+@media screen and (max-width: 1550px){
+    .white-box{
+        width: 800px;
+        padding: 25px;
+        grid-template-columns: 800px;
+    }
+    .contact_info_box hr{
+        margin: 5px;
+    }
+    #map{
+        width: 800px;
+    }
+}
+@media screen and (max-width: 900px){
+    body{
+        grid-template-rows: 30vh 1fr;
+    }
+    nav{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+    }
+    .white-box{
+        width: 350px;
+        grid-template-columns: 350px;
+        grid-template-rows: 60vh 50vh 110vh;
+    }
+    .contact_info_box{
+        flex-direction: column;
+    }
+    .contact_box{
+        flex-direction: column;
+    }
+    #map{
+        width: 325px;
+        height: 300px;
+    }
+    .contact_box hr, .contact_info_box hr{
+        height: 0;
+        width: 50%;
+        margin: 30px 0;
+    }
+    .contact_box > h3{
+        width: 300px;
+        text-align: start;
+    }
+    form{
+        padding: 5px 15px 20px 15px;
+    }
+}
+
+
+
+
