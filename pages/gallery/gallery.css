@@ -29,6 +29,7 @@ nav a {
     padding: 5px 5px;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
+    border-radius: 5px;
 }
 
 nav a:hover,
@@ -101,6 +102,13 @@ main {
     transition: all 0.2s ease-in-out;
 }
 
+#balletButton{
+    border-radius: 5px 0px 0px 0px;
+}
+#abstractButton{
+    border-radius: 0px 5px 0px 0px;
+}
+
 .ballet {
     z-index: 1;
 }
@@ -121,6 +129,8 @@ main {
         "title3 title3"
         "bottomLeft bottomRight";
     grid-gap: 30px;
+
+    border-radius: 0px 10px 10px 10px;
 }
 
 .abstract_gallery {
@@ -347,6 +357,7 @@ img {
         grid-template-rows: 60px 1480px 350px 60px 1480px 350px 60px 1480px 350px;
         padding: 20px;
         grid-gap: 10px;
+        border-radius: 0px 0px 10px 10px;
     }
 
     .gallery_switch {
