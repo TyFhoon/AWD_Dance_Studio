@@ -27,6 +27,7 @@ nav a{
     padding: 5px 5px;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
+    border-radius: 5px;
 }
 nav a:hover {
     color: black;
@@ -272,6 +273,9 @@ input[type="submit"]:hover {
     }
     form{
         padding: 5px 15px 20px 15px;
+    }
+    .banner{
+        background-position-x: 80%;
     }
 }
 

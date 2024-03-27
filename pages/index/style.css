@@ -27,6 +27,7 @@ nav a{
     padding: 5px 5px;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
+    border-radius: 5px;
 }
 nav a:hover {
     color: black;
@@ -37,13 +38,13 @@ button{
     cursor: pointer;
 }
 .burger{
-    z-index: 2;
+    z-index: 20;
     position: absolute;
     top: 33px;
     right: 33px;
 }
 .logo{
-    z-index: 2;
+    z-index: 20;
     position: absolute;
     top: 22px;
     left: 28px;
@@ -79,6 +80,7 @@ main{
     transform: translateY(30%);
     opacity: 0;
     width: 1700px;
+    border-radius: 10px;
 }
 .content{
     display: grid;
