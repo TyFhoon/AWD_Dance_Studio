@@ -1,0 +1,101 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    /* overflow is set to visible after the animation of the content is played*/
+    overflow: hidden;
+    background-color: rgb(25, 25, 25);
+    /* overflow: hidden; */
+    margin: 0;
+    display: grid;
+    grid-template-rows: 45vh 55vh;
+    grid-template-areas: "banner"
+                         "main";
+}
+/*NAV*/
+nav{
+    z-index: 1;
+    background-color: rgba(25, 25, 25, 0.7);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    width: 100%;
+    min-height: 66px;
+
+}
+.logo{
+    z-index: 2;
+    position: absolute;
+    top: 22px;
+    left: 28px;
+    height: 23px;
+    width: auto;
+}
+/*END NAV*/
+/*BANNER*/
+.banner{
+    grid-area: banner;
+    background-image: URL("/media/Login_Banner.jpeg");
+
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*END BANNER*/
+/*MAIN*/
+main{
+    z-index: 0;
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1, h2, h3{
+    color: rgb(220, 220, 220);
+}
+form{
+    margin-top: 30px;
+    background-color: rgb(40, 40, 40);
+    width: 340px;
+    border-radius: 10px;
+    text-align: start;
+    padding: 10px 30px 30px 30px;
+    border: 1px solid rgb(100,100,100);
+}
+form h3{
+    text-align: center;
+}
+label{
+    color: white;
+}
+input, textarea{
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(100,100,100); 
+    font-family: inherit; 
+}
+textarea{
+    resize: none;
+}
+input{
+    height: 25px;  
+}
+.submit{
+    display: flex;
+    justify-content: center;
+}
+input[type="submit"]{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: inherit;
+    width: 40%;
+    height: 30px;
+    font-size: 20px;
+}
+input[type="submit"]:hover {
+    /* Add your hover styles here */
+    background-color: rgb(220, 220, 220);
+    color: black;
+}
